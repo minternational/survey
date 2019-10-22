@@ -16,14 +16,12 @@ class App extends React.Component {
   handleClick = () => {
     this.setState({
       showComponent: true })
-    }    
     // console.log("The button was clicked!")
     // document.getElementById('page')
     // document.getElementsByClassName('App-Header')
-  
+  }    
 
   render() {
-
     return (
         <div className="App">
           <header className="App-header">
