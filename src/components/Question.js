@@ -13,8 +13,22 @@ class Question extends React.Component {
     return(
       <div>
         
-        test
-      
+        Was würdest Du Dir am meisten Wünschen?
+        <hr />
+        <br />
+        <input type="checkbox" />Geiles Weed
+        <br />
+        <input type="checkbox" />Noch geileres Weed
+        <br />
+        <input type="checkbox" />Koks
+        <br />
+        <input type="checkbox" />Nutten
+        <br />
+        <input type="checkbox" />'ne Mille
+        <br />
+        <hr />
+        <br />
+
       </div>
     )
   }
