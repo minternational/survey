@@ -1,14 +1,11 @@
 import React from 'react';
 
 
-class Header extends React.Component {
+function Header() {
   
-  render() {
-    return(
-      <h2>Willkommen zu unserer Umfrage.</h2>
-    )
-  }
-
+  return(
+    <h2>Willkommen zu unserer Umfrage.</h2>
+  )
 }
 
 
