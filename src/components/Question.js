@@ -1,39 +1,27 @@
 import React from 'react'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import ContentQuestionOne from './ContentQuestionOne'
+// import QuestionTwo from './QuestionTwo'
 
 
-class Question extends React.Component {
-  constructor() {
-    super()
-    this.state = {
-      arr: []
-    }
-  }
+function Question() {
 
-  render() {
-    return(
-      <div>
-        
-        Was würdest Du Dir am meisten Wünschen?
-        <hr />
-        <br />
-        <input type="checkbox" />Geiles Weed
-        <br />
-        <input type="checkbox" />Noch geileres Weed
-        <br />
-        <input type="checkbox" />Koks
-        <br />
-        <input type="checkbox" />Nutten
-        <br />
-        <input type="checkbox" />'ne Mille
-        <br />
-        <hr />
-        <br />
-
+  return(
+    <Router>
+      <div className="Question">
+        <ContentQuestionOne />
+        <button id="button">Nächste Frage</button>
       </div>
-    )
-  }
-
+    </Router> 
+  )
 }
 
 
-export default Question
+
+export default Question;
+
+
+// <Link to={'/QuestionTwo'} className="link"><button id="button">Nächste Frage</button></Link>
+//             </Route>
+//             <Route path='/QuestionTwo' component={QuestionTwo} />
+//           </Switch>

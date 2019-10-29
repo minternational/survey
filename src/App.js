@@ -13,7 +13,7 @@ function App() {
           <Switch>
             <Route path='/' exact >
               <Frontpage />
-              <Link to={'/Question'} className="nav-link"><button id="button">Los geht's</button></Link>
+              <Link to={'/Question'} className="link"><button id="button">Los geht's</button></Link>
             </Route>
             <Route path='/Question' component={Question} />
           </Switch>
