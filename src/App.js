@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css';
 import Frontpage from './Frontpage'
 import Question from './components/Question'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 
 class App extends React.Component {
@@ -21,20 +22,30 @@ class App extends React.Component {
     // document.getElementsByClassName('App-Header')
   }    
 
+  
   render() {
     return (
+      <Router>
         <div className="App">
-          <header className="App-header">
-            <div id="page">
-              {this.state.showComponent ? <Question /> : <Frontpage />}
-              <button id="button" onClick={this.handleClick}> {this.state.showComponent ? 'Weiter' : "Los geht's"}
-              </button>
-            </div>
-          </header>
+          <Frontpage />
+            <Link to={'/components/Question'} className="nav-link"> Los geht's </Link>
+          <Switch>
+            <Route path='/components/Question' component={Question} />
+          </Switch>
         </div>
+      </Router>        
     );
   }
 }
 
 
 export default App;
+
+
+
+// <header className="App-header">
+//     {this.state.showComponent ? <Question /> : <Frontpage />}
+//     <button id="button" onClick={this.handleClick}> {this.state.showComponent ? 'Weiter' : "Los geht's"}
+//     </button>
+//   </div>
+// </header>
